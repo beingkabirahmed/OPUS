@@ -1,0 +1,168 @@
+/* ==========================================================================
+   THE OPUS NETWORK — Animations & Motion Design System
+   Cinematic, performant CSS transitions and reduced-motion compliance
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Entrance & Reveal Animations
+   -------------------------------------------------------------------------- */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.reveal-scale-up {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* When In View */
+.reveal-fade-up.is-revealed,
+.reveal-fade-in.is-revealed,
+.reveal-scale-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* --------------------------------------------------------------------------
+   2. Micro Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-halo {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float-vehicle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-chip-1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float-chip-2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes scroll-wheel {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, 12px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 0);
+    opacity: 0;
+  }
+}
+
+/* Electrical Ray Flow Animation for Battery Ecosystem */
+@keyframes flow-rays {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.energy-ray {
+  stroke-dasharray: 8 12;
+  animation: flow-rays 3s linear infinite;
+}
+
+.energy-ray-fast {
+  stroke-dasharray: 6 10;
+  animation: flow-rays 1.8s linear infinite;
+}
+
+/* Rotating Radar Spinner */
+@keyframes radar-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: radar-spin 20s linear infinite;
+}
+
+/* --------------------------------------------------------------------------
+   3. Reduced Motion Overrides
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-fade-up,
+  .reveal-fade-in,
+  .reveal-scale-up {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-main-scooter,
+  .floating-status-chip,
+  .hero-radial-halo {
+    animation: none !important;
+  }
+}

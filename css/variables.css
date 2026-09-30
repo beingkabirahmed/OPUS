@@ -1,0 +1,72 @@
+/* ==========================================================================
+   THE OPUS NETWORK — CSS Custom Properties & Design Tokens
+   Brand Colors: Electric Orange, Energy Yellow, Carbon Black, Supporting Neutrals
+   ========================================================================== */
+
+:root {
+  /* Brand Core Colors */
+  --color-primary: #F97316;              /* Electric Orange */
+  --color-primary-light: #FB923C;
+  --color-primary-dark: #EA580C;
+  --color-primary-glow: rgba(249, 115, 22, 0.35);
+  --color-primary-subtle: rgba(249, 115, 22, 0.12);
+
+  --color-secondary: #FACC15;            /* Energy Yellow */
+  --color-secondary-light: #FDE047;
+  --color-secondary-dark: #CA8A04;
+  --color-secondary-glow: rgba(250, 204, 21, 0.3);
+  --color-secondary-subtle: rgba(250, 204, 21, 0.12);
+
+  /* Carbon Black & Neutral Surface Palettes */
+  --bg-deep: #070709;                   /* Deepest dark */
+  --bg-base: #0B0B0E;                   /* Primary page body background */
+  --bg-surface: #121217;                /* Card background */
+  --bg-surface-elevated: #181820;       /* Hover / active card background */
+  --bg-surface-glass: rgba(18, 18, 23, 0.75);
+  --bg-surface-overlay: rgba(7, 7, 9, 0.85);
+
+  /* Border & Stroke Accents */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-primary: rgba(249, 115, 22, 0.35);
+  --border-secondary: rgba(250, 204, 21, 0.35);
+
+  /* Typography Colors */
+  --text-pure: #FFFFFF;
+  --text-primary: #F3F4F6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --text-inverted: #070709;
+
+  /* State & Semantic Colors */
+  --color-success: #10B981;
+  --color-success-glow: rgba(16, 185, 129, 0.25);
+  --color-info: #38BDF8;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  /* Typography Families */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Space Grotesk', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.75);
+  --shadow-glow-orange: 0 0 30px rgba(249, 115, 22, 0.28);
+  --shadow-glow-yellow: 0 0 30px rgba(250, 204, 21, 0.25);
+
+  /* Layout Dimensions */
+  --container-max-width: 1240px;
+  --header-height: 84px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Smooth Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
